@@ -1,0 +1,12 @@
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\bin\Release\Barcode and QRcode Generator.exe.config
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\bin\Release\Barcode and QRcode Generator.exe
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\bin\Release\Barcode and QRcode Generator.pdb
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\bin\Release\Zen.Barcode.Core.dll
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode and QRcode Generator.csproj.AssemblyReference.cache
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode_and_QRcode_Generator.BarCodeQrcodeGenerator.resources
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode_and_QRcode_Generator.Properties.Resources.resources
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode and QRcode Generator.csproj.GenerateResource.cache
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode and QRcode Generator.csproj.CoreCompileInputs.cache
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode and QRcode Generator.csproj.CopyComplete
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode and QRcode Generator.exe
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Release\Barcode and QRcode Generator.pdb
