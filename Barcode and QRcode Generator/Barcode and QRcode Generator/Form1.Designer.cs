@@ -44,29 +44,33 @@ namespace Barcode_and_QRcode_Generator
             this.lblBarWarning = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblSaveNotification = new System.Windows.Forms.Label();
-            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBarcode
             // 
+            this.btnBarcode.BackColor = System.Drawing.Color.Black;
             this.btnBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBarcode.ForeColor = System.Drawing.Color.White;
             this.btnBarcode.Location = new System.Drawing.Point(624, 62);
             this.btnBarcode.Name = "btnBarcode";
             this.btnBarcode.Size = new System.Drawing.Size(93, 35);
             this.btnBarcode.TabIndex = 0;
             this.btnBarcode.Text = "Generate";
-            this.btnBarcode.UseVisualStyleBackColor = true;
+            this.btnBarcode.UseVisualStyleBackColor = false;
             this.btnBarcode.Click += new System.EventHandler(this.btnBarcode_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
@@ -77,6 +81,7 @@ namespace Barcode_and_QRcode_Generator
             // 
             this.txtBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBarcode.Location = new System.Drawing.Point(89, 42);
+            this.txtBarcode.MaxLength = 199;
             this.txtBarcode.Multiline = true;
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(515, 85);
@@ -86,6 +91,7 @@ namespace Barcode_and_QRcode_Generator
             // 
             this.txtQRcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQRcode.Location = new System.Drawing.Point(89, 175);
+            this.txtQRcode.MaxLength = 199;
             this.txtQRcode.Multiline = true;
             this.txtQRcode.Name = "txtQRcode";
             this.txtQRcode.Size = new System.Drawing.Size(515, 85);
@@ -94,7 +100,9 @@ namespace Barcode_and_QRcode_Generator
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(7, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 20);
@@ -103,14 +111,16 @@ namespace Barcode_and_QRcode_Generator
             // 
             // btnQRcode
             // 
+            this.btnQRcode.BackColor = System.Drawing.Color.Black;
             this.btnQRcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQRcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQRcode.ForeColor = System.Drawing.Color.White;
             this.btnQRcode.Location = new System.Drawing.Point(624, 198);
             this.btnQRcode.Name = "btnQRcode";
             this.btnQRcode.Size = new System.Drawing.Size(93, 35);
             this.btnQRcode.TabIndex = 3;
             this.btnQRcode.Text = "Generate";
-            this.btnQRcode.UseVisualStyleBackColor = true;
+            this.btnQRcode.UseVisualStyleBackColor = false;
             this.btnQRcode.Click += new System.EventHandler(this.btnQRcode_Click);
             // 
             // resultPictureBox
@@ -118,6 +128,7 @@ namespace Barcode_and_QRcode_Generator
             this.resultPictureBox.Location = new System.Drawing.Point(11, 285);
             this.resultPictureBox.Name = "resultPictureBox";
             this.resultPictureBox.Size = new System.Drawing.Size(706, 204);
+            this.resultPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.resultPictureBox.TabIndex = 6;
             this.resultPictureBox.TabStop = false;
             // 
@@ -125,6 +136,7 @@ namespace Barcode_and_QRcode_Generator
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(89, 513);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 35);
@@ -137,7 +149,7 @@ namespace Barcode_and_QRcode_Generator
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(491, 506);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 54);
@@ -195,6 +207,13 @@ namespace Barcode_and_QRcode_Generator
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -213,17 +232,11 @@ namespace Barcode_and_QRcode_Generator
             this.lblSaveNotification.TabIndex = 13;
             this.lblSaveNotification.Text = "w";
             // 
-            // restartToolStripMenuItem
-            // 
-            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.restartToolStripMenuItem.Text = "Restart";
-            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
-            // 
             // BarCodeQrcodeGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(739, 569);
             this.Controls.Add(this.lblSaveNotification);
             this.Controls.Add(this.lblBarWarning);

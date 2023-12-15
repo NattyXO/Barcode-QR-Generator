@@ -31,10 +31,13 @@ namespace Barcode_and_QRcode_Generator
             }
             else
             {
+                lblBarWarning.Text = txtBarcode.Text.Length.ToString();
                 isGenerated = true;
                 resultPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
                 Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
                 resultPictureBox.Image = barcode.Draw(txtBarcode.Text, 200);
+                lblBarWarning.Text = "";
+               
             }
                 
         }
@@ -51,6 +54,9 @@ namespace Barcode_and_QRcode_Generator
                 resultPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
                 Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
                 resultPictureBox.Image = qrcode.Draw(txtQRcode.Text, 200);
+                lblQRWarning.Text = "";
+               
+                
             }
           
         }
