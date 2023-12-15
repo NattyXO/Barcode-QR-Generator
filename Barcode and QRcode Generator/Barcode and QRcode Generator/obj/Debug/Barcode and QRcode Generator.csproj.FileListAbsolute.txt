@@ -10,3 +10,4 @@ C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Ge
 C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Debug\Barcode and QRcode Generator.csproj.CopyComplete
 C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Debug\Barcode and QRcode Generator.exe
 C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Debug\Barcode and QRcode Generator.pdb
+C:\Users\NattyXO\source\repos\Barcode and QRcode Generator\Barcode and QRcode Generator\obj\Debug\Barcode_and_QRcode_Generator.TaostNotification.resources

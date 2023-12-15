@@ -38,15 +38,12 @@ namespace Barcode_and_QRcode_Generator
             this.btnQRcode = new System.Windows.Forms.Button();
             this.resultPictureBox = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblAbout = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.lblQRWarning = new System.Windows.Forms.Label();
-            this.lblBarWarning = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblSaveNotification = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -145,16 +142,18 @@ namespace Barcode_and_QRcode_Generator
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label3
+            // lblAbout
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(491, 506);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 54);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Developed by NattyXO.\r\nVersion 1.0\r\nGitHub:";
+            this.lblAbout.AutoSize = true;
+            this.lblAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbout.ForeColor = System.Drawing.Color.White;
+            this.lblAbout.Location = new System.Drawing.Point(491, 506);
+            this.lblAbout.Name = "lblAbout";
+            this.lblAbout.Size = new System.Drawing.Size(182, 54);
+            this.lblAbout.TabIndex = 8;
+            this.lblAbout.Text = "Developed by NattyXO.\r\nVersion 1.0\r\nGitHub:";
+            this.lblAbout.Click += new System.EventHandler(this.lblAbout_Click);
             // 
             // linkLabel1
             // 
@@ -166,26 +165,6 @@ namespace Barcode_and_QRcode_Generator
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://github.com/NattyXO";
-            // 
-            // lblQRWarning
-            // 
-            this.lblQRWarning.AutoSize = true;
-            this.lblQRWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblQRWarning.Location = new System.Drawing.Point(86, 263);
-            this.lblQRWarning.Name = "lblQRWarning";
-            this.lblQRWarning.Size = new System.Drawing.Size(15, 13);
-            this.lblQRWarning.TabIndex = 10;
-            this.lblQRWarning.Text = "w";
-            // 
-            // lblBarWarning
-            // 
-            this.lblBarWarning.AutoSize = true;
-            this.lblBarWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblBarWarning.Location = new System.Drawing.Point(86, 130);
-            this.lblBarWarning.Name = "lblBarWarning";
-            this.lblBarWarning.Size = new System.Drawing.Size(15, 13);
-            this.lblBarWarning.TabIndex = 11;
-            this.lblBarWarning.Text = "w";
             // 
             // menuStrip1
             // 
@@ -221,28 +200,14 @@ namespace Barcode_and_QRcode_Generator
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // lblSaveNotification
-            // 
-            this.lblSaveNotification.AutoSize = true;
-            this.lblSaveNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaveNotification.ForeColor = System.Drawing.Color.Blue;
-            this.lblSaveNotification.Location = new System.Drawing.Point(197, 525);
-            this.lblSaveNotification.Name = "lblSaveNotification";
-            this.lblSaveNotification.Size = new System.Drawing.Size(16, 15);
-            this.lblSaveNotification.TabIndex = 13;
-            this.lblSaveNotification.Text = "w";
-            // 
             // BarCodeQrcodeGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(739, 569);
-            this.Controls.Add(this.lblSaveNotification);
-            this.Controls.Add(this.lblBarWarning);
-            this.Controls.Add(this.lblQRWarning);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblAbout);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.resultPictureBox);
             this.Controls.Add(this.txtQRcode);
@@ -278,14 +243,11 @@ namespace Barcode_and_QRcode_Generator
         private System.Windows.Forms.Button btnQRcode;
         private System.Windows.Forms.PictureBox resultPictureBox;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblAbout;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lblQRWarning;
-        private System.Windows.Forms.Label lblBarWarning;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Label lblSaveNotification;
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
     }
 }

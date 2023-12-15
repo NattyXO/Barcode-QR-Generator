@@ -18,27 +18,35 @@ namespace Barcode_and_QRcode_Generator
         public BarCodeQrcodeGenerator()
         {
             InitializeComponent();
-            lblQRWarning.Text = null;
-            lblBarWarning.Text = null;
-            lblSaveNotification.Text = null;
+           
+        }
+        public void ToastShow(string type, string message)
+        {
+            TaostNotification toast = new TaostNotification(type, message);
+            toast.Show();
+
+
         }
 
         private void btnBarcode_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtBarcode.Text))
             {
-                lblBarWarning.Text = "Please enter some information!";
+               
+                ToastShow("WARNING", "Please enter some information!");
             }
             else
             {
-                lblBarWarning.Text = txtBarcode.Text.Length.ToString();
+          
                 isGenerated = true;
                 resultPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
                 Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
                 resultPictureBox.Image = barcode.Draw(txtBarcode.Text, 200);
-                lblBarWarning.Text = "";
+               
+                ToastShow("SUCCESS", "Barcode generate successful.");
                
             }
+
                 
         }
 
@@ -46,7 +54,8 @@ namespace Barcode_and_QRcode_Generator
         {
             if (string.IsNullOrWhiteSpace(txtQRcode.Text))
             {
-                lblQRWarning.Text = "Please enter some information!";
+                ToastShow("WARNING", "Please enter some information!");
+
             }
             else
             {
@@ -54,9 +63,10 @@ namespace Barcode_and_QRcode_Generator
                 resultPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
                 Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
                 resultPictureBox.Image = qrcode.Draw(txtQRcode.Text, 200);
-                lblQRWarning.Text = "";
-               
                 
+                ToastShow("SUCCESS", "QRcode generate successful.");
+
+
             }
           
         }
@@ -69,13 +79,13 @@ namespace Barcode_and_QRcode_Generator
 
                 resultPictureBox.Image.Save(path + "\\" + DateTime.Now.Second.ToString()
                     + DateTime.Now.Millisecond.ToString() + ".jpg", ImageFormat.Jpeg);
-                lblSaveNotification.ForeColor = Color.Blue;
-                lblSaveNotification.Text= "Save Successful.";
+               
+                ToastShow("SUCCESS", "Save Successful.");
             }
             else
             {
-                lblSaveNotification.ForeColor = Color.Red;
-                lblSaveNotification.Text = "Please first generate the Barcode or QRcode!";
+              
+                ToastShow("WARNING", "Please first generate the Barcode or QRcode!");
             }
                 
 
@@ -116,6 +126,13 @@ namespace Barcode_and_QRcode_Generator
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+     
+
+        private void lblAbout_Click(object sender, EventArgs e)
+        {
+            ToastShow("INFO", "For Developer Direct Contact\nuse Telegram Username :- @SniperRasMtat");
         }
     }
 }
