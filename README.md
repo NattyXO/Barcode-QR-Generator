@@ -1,57 +1,64 @@
 # Barcode-QR-Generator
 This C# code is a simple Windows Forms application that generates Barcode and QR code images using the Zen.Barcode library. Let's break down the code and provide an explanation:
+Certainly! It seems like you're developing an application for generating barcodes and QR codes in C# using Windows Forms. Let's break down the code and provide a detailed explanation/documentation:
 
-### Libraries Used:
-- `System`: Fundamental types and base class of the .NET Framework.
-- `System.Collections.Generic`: Provides interfaces and classes for generic collections.
-- `System.ComponentModel`: Provides classes that are used to implement the run-time and design-time behavior of components and controls.
-- `System.Data`, `System.Drawing`: Basic drawing functionality.
-- `System.Drawing.Imaging`: Used for working with images and their encodings.
-- `System.Linq`: Provides classes and interfaces that support queries that use Language-Integrated Query (LINQ).
-- `System.Text`, `System.Threading.Tasks`, `System.Windows.Forms`: Windows Forms functionality.
+### BarCodeQrcodeGenerator Form
+This form generates barcodes and QR codes.
 
-### Explanation of Functions and Features:
+- **btnBarcode_Click**
+  - Generates a barcode using the provided text.
+  - Displays a success or warning toast notification accordingly.
 
-1. **Initialization:**
-   - The form initializes components and sets warning labels to `null` upon starting.
+- **btnQRcode_Click**
+  - Generates a QR code using the entered text.
+  - Shows a success or warning toast based on the result.
+
+- **btnSave_Click**
+  - Saves the generated image to the desktop as a JPEG file.
+  - Shows a success or warning toast based on the action.
+
+- **exitToolStripMenuItem_Click**
+  - Exits the application.
+
+- **helpToolStripMenuItem_Click**
+  - Displays a message box with instructions on using the application.
+
+- **restartToolStripMenuItem_Click**
+  - Restarts the application.
+
+- **lblAbout_Click**
+  - Shows an informational toast with contact details.
+### TaostNotification Form
+This form is responsible for displaying toast notifications with different types (SUCCESS, WARNING, INFO).
+
+- **Constructor (`TaostNotification(string type, string message)`)**
+  - Initializes the form, sets the message and type.
+  - Adjusts UI elements based on the notification type.
+
+- **TaostNotification_Load**
+  - Initializes the toast's position and starts the hiding process.
+
+- **toastTimer_Tick**
+  - Controls the toast's appearance and triggers the hiding process.
+
+- **toastHide_Tick**
+  - Manages the hiding animation by decreasing the Y-coordinate.
+  - Closes the form when the toast is completely hidden.
+
+- **Position**
+  - Calculates the initial position of the toast notification on the screen.
   
-2. **Barcode Generation (`btnBarcode_Click`):**
-   - Generates a Code128 barcode using the Zen.Barcode library when the "Generate Barcode" button is clicked.
-   - Displays the generated barcode in the `resultPictureBox` control.
-   - Validates input and shows a warning if the input field is empty.
+### Application Overview
+The application provides functionality to:
+1. Enter text for generating barcodes or QR codes.
+2. Generate the respective code based on user input.
+3. Save the generated image to the desktop.
+4. Display toast notifications for success, warning, and informational messages.
+5. Offer options to exit, restart, and access help or contact information.
 
-3. **QR Code Generation (`btnQRcode_Click`):**
-   - Generates a QR code using the Zen.Barcode library when the "Generate QR Code" button is clicked.
-   - Displays the generated QR code in the `resultPictureBox` control.
-   - Validates input and shows a warning if the input field is empty.
+### Further Improvements
+- **Error Handling**: Implement additional checks for input validation and error handling.
+- **UI/UX Enhancements**: Improve the user interface for better user experience.
+- **Code Refactoring**: Consider refactoring code for better readability and maintainability.
 
-4. **Image Saving (`btnSave_Click`):**
-   - Saves the generated image (barcode or QR code) to the user's desktop as a JPEG file.
-   - Provides a unique filename based on the current time.
-   - Shows a notification of successful or unsuccessful saving based on whether a code has been generated.
-
-5. **Menu Items (`exitToolStripMenuItem`, `helpToolStripMenuItem`, `restartToolStripMenuItem`):**
-   - `exitToolStripMenuItem`: Exits the application.
-   - `helpToolStripMenuItem`: Displays a help message describing how to use the application.
-   - `restartToolStripMenuItem`: Restarts the application.
-
-### Usage Instructions:
-
-1. **Enter Information:**
-   - Input desired text for Barcode or QR code generation in the respective text fields.
-
-2. **Generate the Code:**
-   - Click on "Generate Barcode" or "Generate QR Code" after entering text.
-   - Warnings prompt if fields are empty.
-
-3. **Save the Generated Code:**
-   - Click "Save" to save the generated image on the desktop.
-   - A unique JPEG image file is created based on the current time.
-
-### Possible Improvements:
-- Error handling for invalid input formats.
-- Validation for the generated image format.
-- Adding more barcode or QR code customization options.
-- Enhancing user interface and feedback messages for a better user experience.
-
-This application serves as a basic tool for generating barcodes and QR codes and can be extended with additional features based on user requirements or preferences.
+This documentation summarizes the functionality and structure of your application. If you have specific questions or need more details about any part of the code, feel free to ask!
